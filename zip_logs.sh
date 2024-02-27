@@ -1,8 +1,8 @@
 #!/bin/bash
 
 log_directory="/home/acer/.pm2/logs"
-read -p "Enter the name of the log file (e.g., filename.log): " log_file_name
-read -p "Enter the desired date (YYYY-MM-DD): " date
+read -p "Enter the name of the log file (filename.log): " log_file_name
+read -p "Enter the date you want the logs for (YYYY-MM-DD): " date
 output_directory="/home/acer/coding/LogFileZip"
 
 
@@ -10,7 +10,7 @@ mkdir -p "$output_directory"
 
 
 if [ ! -f "$log_directory/$log_file_name" ]; then
-    echo "Specified log file does not exist."
+    echo "No Such file exists!"
     exit 1
 fi
 
@@ -23,7 +23,7 @@ if [ -s "$output_directory/${date}-$log_file_name-logs.txt" ]; then
     gzip "$output_directory/${date}-$log_file_name-logs.txt"
     echo "Logs containing the specified date have been extracted and zipped successfully."
 else
-    echo "No logs found containing the specified date in the specified log file."
+    echo "There are no logs for the date that you have entered in the log file"
 
     rm -f "$output_directory/${date}-$log_file_name-logs.txt"
 fi
