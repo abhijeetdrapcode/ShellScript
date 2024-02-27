@@ -3,9 +3,10 @@
 #Change these variables according to the directory where log files are being created and where you want to store them
 log_directory="/home/acer/.pm2/logs"
 current_date=$(date +"%Y-%m-%d")
-output_directory="/home/acer/coding/LogFileZip/$current_date"
+zip_folder=$(date +"%d-%m-%Y")
+output_directory="/home/acer/coding/LogFileZip/$zip_folder"
 zip_directory="/home/acer/coding/LogFileZip"
-zip_file="$zip_directory/logs-$current_date.zip"
+zip_file="$zip_directory/logs-$zip_folder.zip"
 
 
 mkdir -p "$output_directory"
