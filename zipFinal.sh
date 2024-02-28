@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#Change these variables according to the directory where log files are being created and where you want to store them
 log_directory="/home/acer/.pm2/logs"
 current_date=$(date +"%Y-%m-%d")
 zip_folder=$(date +"%d-%m-%Y")
