@@ -3,8 +3,8 @@
 log_directory="/home/acer/.pm2/logs"
 current_date=$(date +"%Y-%m-%d")
 zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/LogFileZip/$zip_folder"
-zip_directory="/home/acer/coding/LogFileZip"
+output_directory="/home/acer/coding/zipFolder/LogFileZip/$zip_folder"
+zip_directory="/home/acer/coding/zipFolder/LogFileZip"
 zip_file="$zip_directory/logs-$zip_folder.zip"
 
 

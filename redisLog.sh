@@ -3,8 +3,8 @@
 log_file="/var/log/redis/redis-server.log"
 current_date=$(date +"%d %b %Y") 
 zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/RedisLogFileZip/$zip_folder"
-zip_directory="/home/acer/coding/RedisLogFileZip"
+output_directory="/home/acer/coding/zipFolder/RedisLogFileZip/$zip_folder"
+zip_directory="/home/acer/coding/zipFolder/RedisLogFileZip"
 zip_file="$zip_directory/logs-$zip_folder.zip"
 rediscli_history="/home/acer/.rediscli_history"
 
