@@ -15,20 +15,16 @@ if [ ! -f "$log_file" ]; then
     exit 1
 fi
 
-
 tail -n 500 "$rediscli_history" > "$output_directory/rediscli_history_last_500_lines.txt"
+grep "$current_date" "$log_file" > "$output_directory/${current_date}-redis-logs.txt"
 
-
-grep "$current_date" "$log_file" > "$output_directory/${current_date}-syslog-logs.txt"
-
-if [ -s "$output_directory/${current_date}-syslog-logs.txt" ]; then
-    echo "Logs containing the current date from syslog have been extracted successfully."
+if [ -s "$output_directory/${current_date}-redis-logs.txt" ]; then
+    echo "Logs containing the current date from redis-server have been extracted successfully."
 else
-    rm -f "$output_directory/${current_date}-syslog-logs.txt"
-    echo "No logs containing the current date found in syslog."
+    rm -f "$output_directory/${current_date}-redis-server-logs.txt"
+    echo "No logs containing the current date found in redis-server."
 fi
-
 
 zip -j "$zip_file" "$output_directory"/*
 rm -r "$output_directory"
-echo "Logs for the current date from syslog and last 500 lines of .rediscli_history have been zipped into $zip_file."
+echo "Logs for the current date from redis-server and last 500 lines of .rediscli_history have been zipped into $zip_file."
