@@ -3,8 +3,8 @@
 log_directory="/var/log/mongodb"
 current_date=$(date +"%Y-%m-%d")
 zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/MongoLogZip/$zip_folder"
-zip_directory="/home/acer/coding/MongoLogZip"
+output_directory="/home/acer/coding/zipFolder/MongoLogZip/$zip_folder"
+zip_directory="/home/acer/coding/zipFolder/MongoLogZip"
 zip_file="$zip_directory/mongodb-logs-$zip_folder.zip"
 
 mkdir -p "$output_directory"
