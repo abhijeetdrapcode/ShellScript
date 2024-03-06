@@ -5,7 +5,7 @@ today=$(date +"%Y-%m-%d")
 output_directory="/home/acer/coding/zipFolder/LinuxCommand"
 output_file="$output_directory/$today-commands.txt"
 zip_folder=$(date +"%Y-%m-%d")
-zip_file="$output_directory/$today-commands_$zip_folder.zip"
+zip_file="$output_directory/$today.zip"
 
 mkdir -p "$output_directory"
 user=$(whoami)
