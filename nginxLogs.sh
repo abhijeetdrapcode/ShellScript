@@ -9,7 +9,6 @@ zip_directory="/home/acer/coding/zipFolder/nginxLogs"
 zip_file="$zip_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"
-
 log_files=$(find "$log_directory" -type f)
 
 if [ -z "$log_files" ]; then
