@@ -3,9 +3,9 @@
 history_file=~/.bash_history
 today=$(date +"%Y-%m-%d")
 output_directory="/home/acer/coding/zipFolder/LinuxCommand"
-output_file="$output_directory/$today-commands.txt"
-zip_folder=$(date +"%Y-%m-%d")
-zip_file="$output_directory/$today.zip"
+zip_folder=$(date +"%d-%m-%Y")
+output_file="$output_directory/$zip_folder-commands.txt"
+zip_file="$output_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"
 user=$(whoami)

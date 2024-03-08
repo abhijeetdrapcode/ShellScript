@@ -3,18 +3,18 @@
 log_file="/var/log/redis/redis-server.log"
 current_date=$(date +"%d %b %Y") 
 zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/zipFolder/RedisLogFileZip/$zip_folder"
-zip_directory="/home/acer/coding/zipFolder/RedisLogFileZip"
+output_directory="/home/acer/coding/zipFolder/RedisLogs/$zip_folder"
+zip_directory="/home/acer/coding/zipFolder/RedisLogs"
 zip_file="$zip_directory/$zip_folder.zip"
 rediscli_history="/home/acer/.rediscli_history"
 
 mkdir -p "$output_directory"
-
 if [ ! -f "$log_file" ]; then
     echo "The log file $log_file does not exist."
     exit 1
 fi
 
+# remove this line later, redis cli is being used with nodejs and the commands are not getting stored in the redis-cli.history file  
 tail -n 500 "$rediscli_history" > "$output_directory/rediscli_history_last_500_lines.txt"
 grep "$current_date" "$log_file" > "$output_directory/${current_date}-redis-logs.txt"
 
