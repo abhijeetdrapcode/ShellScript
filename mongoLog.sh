@@ -1,10 +1,12 @@
 #!/bin/bash
 
 log_directory="/var/log/mongodb"
-current_date=$(date +"%Y-%m-%d")
-zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/zipFolder/MongoLogs/$zip_folder"
 zip_directory="/home/acer/coding/zipFolder/MongoLogs"
+
+zip_folder=$(date +"%d-%m-%Y")
+current_date=$(date +"%Y-%m-%d")
+
+output_directory="$zip_directory/$zip_folder"
 zip_file="$zip_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"
@@ -16,11 +18,16 @@ if [ -z "$log_files" ]; then
 fi
 
 for log_file in $log_files; do
-    grep "$current_date" "$log_file" > "$output_directory/${current_date}-$(basename "$log_file").txt"
-    if [ -s "$output_directory/${current_date}-$(basename "$log_file").txt" ]; then
+    if [ "$(basename "$log_file")" != "audit.json" ]; then
+        grep "$current_date" "$log_file" > "$output_directory/${current_date}-$(basename "$log_file").txt"
+    else
+        grep "$current_date" "$log_file" > "$output_directory/${current_date}-$(basename "$log_file")"
+    fi
+    if [ -s "$output_directory/${current_date}-$(basename "$log_file").txt" ] || [ -s "$output_directory/${current_date}-$(basename "$log_file")" ]; then
         echo "Logs containing the current date from $(basename "$log_file") have been extracted successfully."
     else
         rm -f "$output_directory/${current_date}-$(basename "$log_file").txt"
+        rm -f "$output_directory/${current_date}-$(basename "$log_file")"
     fi
 done
 

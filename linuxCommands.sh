@@ -1,9 +1,11 @@
 #!/bin/bash
 
 history_file=~/.bash_history
-today=$(date +"%Y-%m-%d")
 output_directory="/home/acer/coding/zipFolder/LinuxCommand"
+
+today=$(date +"%Y-%m-%d")
 zip_folder=$(date +"%d-%m-%Y")
+
 output_file="$output_directory/$zip_folder-commands.txt"
 zip_file="$output_directory/$zip_folder.zip"
 

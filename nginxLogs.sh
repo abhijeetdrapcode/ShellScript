@@ -1,11 +1,15 @@
 #!/bin/bash
 
 log_directory="/var/log/nginx"
+zip_directory="/home/acer/coding/zipFolder/nginxLogs"
+
+
 current_date_access=$(date +"%d/%b/%Y")
 current_date_error=$(date +"%Y/%m/%d") 
+
+
 zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/zipFolder/nginxLogs/$zip_folder"
-zip_directory="/home/acer/coding/zipFolder/nginxLogs"
+output_directory="$zip_directory/$zip_folder"
 zip_file="$zip_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"

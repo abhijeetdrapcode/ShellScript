@@ -1,9 +1,11 @@
 #!/bin/bash
 
 log_files=("/var/log/syslog" "/var/log/auth.log" "/var/log/kern.log")
-zip_folder=$(date +"%d-%m-%Y")
-output_directory="/home/acer/coding/zipFolder/LinuxLogs/$zip_folder"
 zip_directory="/home/acer/coding/zipFolder/LinuxLogs"
+
+zip_folder=$(date +"%d-%m-%Y")
+
+output_directory="$zip_directory/$zip_folder"
 zip_file="$zip_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"
