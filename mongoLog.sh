@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chown -R $USER /var/log/mongodb
+
 log_directory="/var/log/mongodb"
 zip_directory="/home/acer/coding/zipFolder/MongoLogs"
 
