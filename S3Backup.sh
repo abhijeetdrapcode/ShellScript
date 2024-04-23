@@ -2,9 +2,12 @@
 
 AWS_PROFILE="default"
 BUCKET_NAME="abhijeettestingbucket22"
+
 LOG_DIR="/home/acer/coding/zipFolder/MongoLogs"
+
 CURRENT_DATE=$(date +"%d-%m-%Y")
 LOG_FILE="$LOG_DIR/$CURRENT_DATE.zip"
+
 TO="mca22.abhijeetrana@bvicam.in"
 SUBJECT="S3 Upload Notification"
 
