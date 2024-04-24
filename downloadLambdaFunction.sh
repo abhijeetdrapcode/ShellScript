@@ -2,7 +2,7 @@
 
 download_folder="$HOME/Downloads"
 
-lambda_functions=$(aws lambda list-functions --query 'Functions[*].FunctionName' --output text)
+lambda_functions=$(aws lambda list-functions --query 'Functions[*].FunctionName' )
 
 echo "Available Lambda functions:"
 echo "$lambda_functions"

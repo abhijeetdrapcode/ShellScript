@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lambda_functions=$(aws lambda list-functions --query 'Functions[*].FunctionName' --output text)
+lambda_functions=$(aws lambda list-functions --query 'Functions[*].FunctionName')
 
 echo "Available Lambda functions:"
 echo "$lambda_functions"
@@ -10,7 +10,6 @@ read -p "Enter the name of the Lambda function you want to invoke: " function_na
 
 read -p "Enter the payload (input data) for the Lambda function (optional): " payload
 
-# Invoke the selected Lambda function
 if [ -z "$payload" ]; then
     aws lambda invoke --function-name "$function_name" /dev/stdout
 else

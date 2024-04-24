@@ -1,3 +1,3 @@
 #!/bin/bash
 
-aws lambda list-functions --query 'Functions[*].FunctionName' --output text
+aws lambda list-functions --query 'Functions[*].FunctionName' 
