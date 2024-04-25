@@ -1,0 +1,25 @@
+2024-04-25 15:28:06: INIT_START Runtime Version: nodejs:20.v22	Runtime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755
+1970-01-01 05:30:00: 
+2024-04-25 15:28:06: 2024-04-25T09:58:06.751Z	undefined	ERROR	Uncaught Exception 	{"errorType":"Runtime.UserCodeSyntaxError","errorMessage":"SyntaxError: missing ) after argument list","stack":["Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list","    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)","    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)","    at async start (file:///var/runtime/index.mjs:1282:23)","    at async file:///var/runtime/index.mjs:1288:1"]}
+1970-01-01 05:30:00: 
+2024-04-25 15:28:06: INIT_REPORT Init Duration: 134.89 ms	Phase: init	Status: error	Error Type: Runtime.ExitError
+1970-01-01 05:30:00: 
+2024-04-25 15:28:07: 2024-04-25T09:58:07.871Z	undefined	ERROR	Uncaught Exception 	{"errorType":"Runtime.UserCodeSyntaxError","errorMessage":"SyntaxError: missing ) after argument list","stack":["Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list","    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)","    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)","    at async start (file:///var/runtime/index.mjs:1282:23)","    at async file:///var/runtime/index.mjs:1288:1"]}
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: INIT_REPORT Init Duration: 1381.20 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: START RequestId: db544ac0-b724-41b8-9497-b1243e442d0d Version: $LATEST
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: Unknown application error occurred
+: Runtime.UserCodeSyntaxError
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: END RequestId: db544ac0-b724-41b8-9497-b1243e442d0d
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: REPORT RequestId: db544ac0-b724-41b8-9497-b1243e442d0d	Duration: 1421.67 ms	Billed Duration: 1422 ms	Memory Size: 128 MB	Max Memory Used: 12 MB
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: INIT_START Runtime Version: nodejs:20.v22	Runtime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: 2024-04-25T09:58:08.305Z	undefined	ERROR	Uncaught Exception 	{"errorType":"Runtime.UserCodeSyntaxError","errorMessage":"SyntaxError: missing ) after argument list","stack":["Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list","    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)","    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)","    at async start (file:///var/runtime/index.mjs:1282:23)","    at async file:///var/runtime/index.mjs:1288:1"]}
+1970-01-01 05:30:00: 
+2024-04-25 15:28:08: INIT_REPORT Init Duration: 79.11 ms	Phase: init	Status: error	Error Type: Runtime.ExitError
+1970-01-01 05:30:00: 

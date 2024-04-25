@@ -1,0 +1,66 @@
+{
+    "events": [
+        {
+            "timestamp": 1714039086639,
+            "message": "INIT_START Runtime Version: nodejs:20.v22\tRuntime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755\n",
+            "ingestionTime": 1714039086840
+        },
+        {
+            "timestamp": 1714039086751,
+            "message": "2024-04-25T09:58:06.751Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: missing ) after argument list\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)\",\"    at async start (file:///var/runtime/index.mjs:1282:23)\",\"    at async file:///var/runtime/index.mjs:1288:1\"]}\n",
+            "ingestionTime": 1714039086840
+        },
+        {
+            "timestamp": 1714039086774,
+            "message": "INIT_REPORT Init Duration: 134.89 ms\tPhase: init\tStatus: error\tError Type: Runtime.ExitError\n",
+            "ingestionTime": 1714039086840
+        },
+        {
+            "timestamp": 1714039087871,
+            "message": "2024-04-25T09:58:07.871Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: missing ) after argument list\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)\",\"    at async start (file:///var/runtime/index.mjs:1282:23)\",\"    at async file:///var/runtime/index.mjs:1288:1\"]}\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088170,
+            "message": "INIT_REPORT Init Duration: 1381.20 ms\tPhase: invoke\tStatus: error\tError Type: Runtime.ExitError\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088170,
+            "message": "START RequestId: db544ac0-b724-41b8-9497-b1243e442d0d Version: $LATEST\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088210,
+            "message": "Unknown application error occurred\nRuntime.UserCodeSyntaxError\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088210,
+            "message": "END RequestId: db544ac0-b724-41b8-9497-b1243e442d0d\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088210,
+            "message": "REPORT RequestId: db544ac0-b724-41b8-9497-b1243e442d0d\tDuration: 1421.67 ms\tBilled Duration: 1422 ms\tMemory Size: 128 MB\tMax Memory Used: 12 MB\t\n",
+            "ingestionTime": 1714039088211
+        },
+        {
+            "timestamp": 1714039088245,
+            "message": "INIT_START Runtime Version: nodejs:20.v22\tRuntime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755\n",
+            "ingestionTime": 1714039088330
+        },
+        {
+            "timestamp": 1714039088305,
+            "message": "2024-04-25T09:58:08.305Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: missing ) after argument list\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: missing ) after argument list\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1084:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1119:21)\",\"    at async start (file:///var/runtime/index.mjs:1282:23)\",\"    at async file:///var/runtime/index.mjs:1288:1\"]}\n",
+            "ingestionTime": 1714039088330
+        },
+        {
+            "timestamp": 1714039088324,
+            "message": "INIT_REPORT Init Duration: 79.11 ms\tPhase: init\tStatus: error\tError Type: Runtime.ExitError\n",
+            "ingestionTime": 1714039088330
+        }
+    ],
+    "nextForwardToken": "f/38224348969035249675985645475043602672199570857244819458/s",
+    "nextBackwardToken": "b/38224348931458494016461545479755094685407710208276627456/s"
+}

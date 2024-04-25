@@ -43,6 +43,6 @@ read -p "Do you want to download all log events for Log Stream $log_stream_name?
 
 if [[ "$download_choice" == "yes" || "$download_choice" == "y" ]]; then
   log_stream_name_cleaned="${log_stream_name//\//_}"
-  echo "$log_events" > "${function_name}-${log_stream_name_cleaned}-logs.json"
-  echo "Log events downloaded to: ${function_name}-${log_stream_name_cleaned}-logs.json in the current directory."
+  echo "$log_events" > "${function_name}-logs.json"
+  echo "Log events downloaded to: ${function_name}-logs.json in the current directory."
 fi

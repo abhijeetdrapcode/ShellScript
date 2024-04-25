@@ -1,0 +1,26 @@
+{
+    "events": [
+        {
+            "timestamp": 1714024555024,
+            "message": "INIT_START Runtime Version: nodejs:20.v22\tRuntime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755\n",
+            "ingestionTime": 1714024561547
+        },
+        {
+            "timestamp": 1714024555158,
+            "message": "START RequestId: 5b470b4f-2e32-4f36-8bc3-84a4e8108e4a Version: $LATEST\n",
+            "ingestionTime": 1714024561547
+        },
+        {
+            "timestamp": 1714024555168,
+            "message": "END RequestId: 5b470b4f-2e32-4f36-8bc3-84a4e8108e4a\n",
+            "ingestionTime": 1714024561547
+        },
+        {
+            "timestamp": 1714024555168,
+            "message": "REPORT RequestId: 5b470b4f-2e32-4f36-8bc3-84a4e8108e4a\tDuration: 7.35 ms\tBilled Duration: 8 ms\tMemory Size: 128 MB\tMax Memory Used: 64 MB\tInit Duration: 132.75 ms\t\n",
+            "ingestionTime": 1714024561547
+        }
+    ],
+    "nextForwardToken": "f/38224024868826363179468734764567725371492406952168128515/s",
+    "nextBackwardToken": "b/38224024865615055870880325032186581940231042895306948608/s"
+}
