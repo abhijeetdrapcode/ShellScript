@@ -1,0 +1,20 @@
+{
+  "timestamp": "2024-04-25 09:35:30 IST",
+  "message": "INIT_START Runtime Version: nodejs:20.v22\tRuntime Version ARN: arn:aws:lambda:ap-south-1::runtime:b41f958332022b46328145bcd27dce02539c950ccbf6fde05884f8106362b755\n",
+  "ingestionTime": 1714037737599
+}
+{
+  "timestamp": "2024-04-25 09:35:30 IST",
+  "message": "START RequestId: b84cec02-bce9-4211-8783-a4dc3c4eb555 Version: $LATEST\n",
+  "ingestionTime": 1714037737599
+}
+{
+  "timestamp": "2024-04-25 09:35:30 IST",
+  "message": "END RequestId: b84cec02-bce9-4211-8783-a4dc3c4eb555\n",
+  "ingestionTime": 1714037737599
+}
+{
+  "timestamp": "2024-04-25 09:35:30 IST",
+  "message": "REPORT RequestId: b84cec02-bce9-4211-8783-a4dc3c4eb555\tDuration: 19.77 ms\tBilled Duration: 20 ms\tMemory Size: 128 MB\tMax Memory Used: 64 MB\tInit Duration: 289.04 ms\t\n",
+  "ingestionTime": 1714037737599
+}
