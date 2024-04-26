@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# Check Disk Space
-DISK_SPACE=$(df -h / | awk 'NR==2 {print $5}')
+EMAIL="abhijeet@drapcode.com"
+SUBJECT="Disk Space Alert"
 
-# Threshold (80%)
-THRESHOLD="18%"
+DISK_SPACE=$(df -h / | awk 'NR==2 {print $5}' | tr -d '%')
 
-# Check if Disk Space exceeds threshold
-if [ "${DISK_SPACE%?}" -gt "${THRESHOLD%?}" ]; then
-    MESSAGE="Disk space usage is at $DISK_SPACE. It has exceeded the threshold of $THRESHOLD. Please check and free up some space."
+THRESHOLD=20
+
+if [ "$DISK_SPACE" -gt "$THRESHOLD" ]; then
+    MESSAGE="Disk space usage is at $DISK_SPACE%. It has exceeded the threshold of $THRESHOLD%. Please check and free up some space."
     echo "$MESSAGE"
+    
+    echo "$MESSAGE" | mail -s "$SUBJECT" "$EMAIL"
 else
-    echo "Disk space usage is at $DISK_SPACE. Everything is within the threshold."
+    echo "Disk space usage is at $DISK_SPACE%. Everything is within the threshold."
 fi
