@@ -30,7 +30,6 @@ for log_file in $log_files; do
 
     if [ -s "$output_directory/$(basename "$log_file").txt" ]; then
         echo "Logs containing the current date from $(basename "$log_file") have been extracted successfully."
-        # Remove today's logs from the original file
         grep -v "$current_date_access" "$log_file" | grep -v "$current_date_error" > "$log_directory/$(basename "$log_file").tmp" && mv "$log_directory/$(basename "$log_file").tmp" "$log_file"
         echo "Today's logs have been removed from $(basename "$log_file")."
     else

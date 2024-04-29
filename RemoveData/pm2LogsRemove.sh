@@ -20,7 +20,6 @@ for log_file in $log_files; do
     grep -E "$current_date" "$log_file" > "$output_directory/$(basename "$log_file").txt"
     if [ -s "$output_directory/$(basename "$log_file").txt" ]; then
         echo "Logs containing the current date from $(basename "$log_file") have been extracted successfully."
-        # Remove today's logs from the original file
         sed -i "/$current_date/d" "$log_file"
         echo "Today's logs have been removed from $(basename "$log_file")."
     else

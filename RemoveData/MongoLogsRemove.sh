@@ -25,7 +25,6 @@ for log_file in $log_files; do
     fi
     if [ -s "$output_directory/${current_date}-$(basename "$log_file").txt" ] || [ -s "$output_directory/${current_date}-$(basename "$log_file")" ]; then
         echo "Logs containing the current date from $(basename "$log_file") have been extracted successfully."
-        # Remove today's logs from the original file
         grep -v "$current_date" "$log_file" > "$log_file.tmp" && mv "$log_file.tmp" "$log_file"
         echo "Today's logs have been removed from $(basename "$log_file")."
     else
