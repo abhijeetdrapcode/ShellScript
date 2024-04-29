@@ -1,7 +1,7 @@
 #!/bin/bash
 
 log_files=("/var/log/syslog" "/var/log/auth.log" "/var/log/kern.log")
-zip_directory="/home/acer/coding/zipFolder/LinuxLogs"
+zip_directory="/home/acer/zipFolder/LinuxLogs"
 
 zip_folder=$(date +"%d-%m-%Y")
 
@@ -17,7 +17,6 @@ for log_file in "${log_files[@]}"; do
     fi
     grep "$current_date" "$log_file" > "$output_directory/${current_date}-$(basename $log_file).txt"
     if [ -s "$output_directory/${current_date}-$(basename $log_file).txt" ]; then
-        echo "Logs containing the current date from $(basename $log_file) have been extracted successfully."
         echo "Logs for the current date for $(basename $log_file) have been zipped into $zip_file."
     else
         rm -f "$output_directory/${current_date}-$(basename $log_file).txt"

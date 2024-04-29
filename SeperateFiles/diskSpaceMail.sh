@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EMAIL="abhijeet@drapcode.com"
+EMAIL="abhijeet444rana@gmail.com"
 SUBJECT="Disk Space Alert"
 
 DISK_SPACE=$(df -h / | awk 'NR==2 {print $5}' | tr -d '%')
