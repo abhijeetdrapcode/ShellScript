@@ -3,7 +3,7 @@
 log_directory="/var/log/mongodb"
 zip_directory="/home/acer/zipFolder/MongoLogs"
 
-zip_folder=$(date +"%d-%m-%Y_%H-%M-%S")
+zip_folder=$(date +"%d-%m-%Y")
 current_date=$(date +"%Y-%m-%d")
 
 output_directory="$zip_directory/$zip_folder"
