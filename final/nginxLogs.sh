@@ -2,13 +2,9 @@
 
 log_directory="/var/log/nginx"
 zip_directory="/home/acer/zipFolder/nginxLogs"
-
 zip_folder=$(date +"%d-%m-%Y")
-
 current_date_access=$(date +"%d/%b/%Y")
-current_date_error=$(date +"%Y/%m/%d") 
-
-
+current_date_error=$(date +"%Y/%m/%d")
 output_directory="$zip_directory/$zip_folder"
 zip_file="$zip_directory/$zip_folder.zip"
 
@@ -19,6 +15,8 @@ if [ -z "$log_files" ]; then
     echo "There are no log files in the log folder."
     exit 1
 fi
+
+success=true
 
 for log_file in $log_files; do
     if grep -q "$current_date_access" "$log_file"; then
@@ -34,9 +32,16 @@ for log_file in $log_files; do
         echo "Logs containing the current date from $(basename "$log_file") have been extracted successfully."
     else
         rm -f "$output_directory/$(basename "$log_file").txt"
+        success=false
     fi
 done
 
-zip -j "$zip_file" "$output_directory"/*
-rm -r "$output_directory"
-echo "Logs for the current date have been zipped into $zip_file."
+if zip -j "$zip_file" "$output_directory"/* && rm -r "$output_directory"; then
+    if $success; then
+        echo "Logs for the current date have been zipped into $zip_file."
+    else
+        echo "Error: Failed to extract logs from some files."
+    fi
+else
+    echo "Error: Failed to create the zip file."
+fi
