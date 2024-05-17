@@ -2,9 +2,12 @@
 
 log_directory="/home/acer/.pm2/logs"
 zip_directory="/home/acer/zipFolder/pm2Logs"
+
 current_date=$(date +"%Y-%m-%d")
+
 zip_folder=$(date +"%d-%m-%Y")
 output_directory="$zip_directory/$zip_folder"
+
 zip_file="$zip_directory/$zip_folder.zip"
 
 mkdir -p "$output_directory"

@@ -18,4 +18,12 @@ for script_file in $script_files; do
     fi
 done
 
-aws s3 cp "$folder_to_copy" "s3://$s3_bucket/$folder_to_copy" --recursive
+aws s3 cp "$folder_to_copy/" "s3://$s3_bucket/" --recursive
+
+
+if [ $? -eq 0 ]; then
+    echo "Files successfully copied to S3. Deleting local files to save space..."
+    rm -rf "$folder_to_copy"
+else
+    echo "Failed to copy files to S3. Local files are not deleted."
+fi

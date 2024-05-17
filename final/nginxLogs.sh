@@ -2,9 +2,12 @@
 
 log_directory="/var/log/nginx"
 zip_directory="/home/acer/zipFolder/nginxLogs"
+
 zip_folder=$(date +"%d-%m-%Y")
+
 current_date_access=$(date +"%d/%b/%Y")
 current_date_error=$(date +"%Y/%m/%d")
+
 output_directory="$zip_directory/$zip_folder"
 zip_file="$zip_directory/$zip_folder.zip"
 
