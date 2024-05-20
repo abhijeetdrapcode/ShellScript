@@ -9,7 +9,7 @@ today=$(date +"%Y-%m-%d")
 zip_folder=$(date +"%d-%m-%Y")
 output_file="$output_directory/$zip_folder-commands.txt"
 
-zip_file="$output_directory.zip"
+zip_file="$output_directory"
 
 mkdir -p "$output_directory"
 user=$(whoami)
