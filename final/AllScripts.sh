@@ -1,7 +1,8 @@
 #!/bin/bash
 
-s3_bucket="abhijeettestingbucket22"
-folder_to_copy="/home/acer/zipFolder"
+s3_bucket="abhijeettestingbucket23"
+today_date=$(date +"%d-%m-%Y")
+folder_to_copy="/home/acer/$today_date"
 
 current_dir=$(dirname "$0")
 
@@ -18,7 +19,7 @@ for script_file in $script_files; do
     fi
 done
 
-aws s3 cp "$folder_to_copy/" "s3://$s3_bucket/" --recursive
+aws s3 cp "$folder_to_copy" "s3://$s3_bucket/$today_date" --recursive
 
 
 if [ $? -eq 0 ]; then

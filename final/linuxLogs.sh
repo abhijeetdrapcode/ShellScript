@@ -1,12 +1,13 @@
 #!/bin/bash
 
 log_files=("/var/log/syslog" "/var/log/auth.log" "/var/log/kern.log")
-zip_directory="/home/acer/zipFolder/LinuxLogs"
+today_date=$(date +"%d-%m-%Y")
+zip_directory="/home/acer/$today_date/LinuxLogs"
 
 zip_folder=$(date +"%d-%m-%Y")
 
 output_directory="$zip_directory/$zip_folder"
-zip_file="$zip_directory/$zip_folder.zip"
+zip_file="$zip_directory"
 
 mkdir -p "$output_directory"
 
@@ -29,7 +30,7 @@ for log_file in "${log_files[@]}"; do
     fi
 done
 
-if zip -j "$zip_file" "$output_directory"/* && rm -r "$output_directory"; then
+if zip -j "$zip_file" "$output_directory"/* && rm -r "$zip_directory"; then
     if $success; then
         echo "Logs for the current date have been zipped into $zip_file."
     else

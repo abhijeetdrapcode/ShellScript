@@ -1,13 +1,14 @@
 #!/bin/bash
 
 log_directory="/var/log/mongodb"
-zip_directory="/home/acer/zipFolder/MongoLogs"
+today_date=$(date +"%d-%m-%Y")
+zip_directory="/home/acer/$today_date/MongoLogs"
 
 zip_folder=$(date +"%d-%m-%Y")
 current_date=$(date +"%Y-%m-%d")
 
 output_directory="$zip_directory/$zip_folder"
-zip_file="$zip_directory/$zip_folder.zip"
+zip_file="$zip_directory"
 
 mkdir -p "$output_directory"
 log_files=$(find "$log_directory" -type f)
@@ -35,7 +36,7 @@ for log_file in $log_files; do
     fi
 done
 
-if zip -j "$zip_file" "$output_directory"/* && rm -r "$output_directory"; then
+if zip -j "$zip_file" "$output_directory"/* && rm -r "$zip_directory"; then
     if $success; then
         echo "MongoDB logs for the current date have been zipped into $zip_file."
     else
